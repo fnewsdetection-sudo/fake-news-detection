@@ -51,6 +51,7 @@ function App() {
 
     try {
       const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:5000';
+      console.log('Using API URL:', apiUrl);
       const response = await fetch(`${apiUrl}/analyze`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
